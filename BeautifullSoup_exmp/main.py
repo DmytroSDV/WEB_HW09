@@ -57,8 +57,8 @@ class QuotePageScrapping:
         return result_list
 
     def save_to_json(self, data, filename):
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=4, ensure_ascii=False)
+        with open(filename, 'w', encoding='utf-8') as fh:
+            json.dump(data, fh, indent=4, ensure_ascii=False)
 
 @sync_time
 def main():        
